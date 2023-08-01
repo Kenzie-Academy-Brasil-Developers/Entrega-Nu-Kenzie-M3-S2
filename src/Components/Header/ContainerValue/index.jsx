@@ -3,9 +3,9 @@ import styles from "./value.module.scss"
 function RenderValue({ listValues }) {
 
     const totalValue = listValues.reduce((prevValue, list) => {
-        return prevValue + list.value
+        return prevValue + Number(list.value);
     }, 0)
-
+    
     return (
         <>
             <div className={styles.container__main}>

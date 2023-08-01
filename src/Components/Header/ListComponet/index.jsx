@@ -9,7 +9,7 @@ function ListComponet({ id, description, value, typeValue, removeValue }) {
       <h2>{description}</h2>
 
       <div>
-      <h3>{value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</h3>
+      <h3>{`R$ ${value}`}</h3>
       </div>
 
       <div className={styles.div__typevalue}>

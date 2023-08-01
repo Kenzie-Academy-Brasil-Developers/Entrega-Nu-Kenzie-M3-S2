@@ -4,19 +4,18 @@ import "./index.scss";
 import RenderValue from './Components/Header/ContainerValue';
 import RenderSalary from './Components/Header/SectionSalary';
 import { useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
 
 function App() {
 
   const [listValues, setListValues] = useState([]);
 
   const addValue = (formValues) => {
-  const newValues = { ...formValues, id: uuidv4()};
+  const newValues = { ...formValues};
       setListValues([...listValues, newValues]);
   }
 
-    const removeValue = (removeId) => {
-    const newListValues = listValues.filter((elem, i) =>  i !== removeId)
+  const removeValue = (removeId) => {
+  const newListValues = listValues.filter((elem, i) =>  i !== removeId)
     setListValues(newListValues);
   }
 

@@ -30,7 +30,7 @@ function FormPages({ addValue }) {
 
         <Input
           label="Valor (R$)"
-          type="text"
+          type="number"
           placeholder="1"
           id="value"
           value={value}

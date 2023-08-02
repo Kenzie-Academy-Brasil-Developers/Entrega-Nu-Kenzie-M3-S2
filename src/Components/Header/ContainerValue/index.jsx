@@ -2,9 +2,14 @@ import styles from "./value.module.scss"
 
 function RenderValue({ listValues }) {
 
-    const totalValue = listValues.reduce((prevValue, list) => {
-        return prevValue + Number(list.value);
-    }, 0)
+        const totalValue = listValues.reduce((prevValue, list) => {
+          if (list.typeValue === 'Entrada') {
+            return prevValue + Number(list.value);
+          } else {
+            return prevValue - Number(list.value);
+          }
+        }, 0);
+      
     
     return (
         <>
